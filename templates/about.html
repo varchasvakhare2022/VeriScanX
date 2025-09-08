@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" href="static/logo.svg">
+
+    <!-- Tailwind CSS v2 -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>About Us - VeriScanX</title>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Adding a subtle background pattern for visual depth */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a202c' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.1;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white relative">
+
+    <div class="container mx-auto px-6">
+        <!-- Header / Navbar -->
+        <header class="py-6 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="/" class="flex items-center space-x-3">
+                <img src="static/logo.svg" alt="VeriScanX Logo" class="h-10 w-10">
+                <span class="text-2xl font-semibold text-white">VeriScanX</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex space-x-8 text-base items-center">
+                <a href="/" class="text-gray-400 hover:text-white transition duration-300">Home</a>
+                <a href="/predict" class="text-gray-400 hover:text-white transition duration-300">Prediction</a>
+                <a href="/working" class="text-gray-400 hover:text-white transition duration-300">How It Works</a>
+                <a href="/about" class="text-white font-medium">About</a>
+                <a href="/contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="py-16 md:py-24">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight">Who We Are</h1>
+                <p class="mt-4 text-xl text-gray-400">Our Mission, Vision & Team</p>
+            </div>
+
+            <!-- Story and Vision Section -->
+            <div class="mt-20 max-w-5xl mx-auto grid md:grid-cols-2 gap-12 text-left">
+                <div>
+                    <h2 class="text-3xl font-bold text-white">Our <span class="text-green-400">Story</span></h2>
+                    <p class="mt-4 text-gray-400 leading-relaxed">
+                        In an age of digital information overload, distinguishing fact from fiction has never been more challenging. Misinformation spreads rapidly, influencing opinions and shaping narratives. VeriScanX was born from a simple yet powerful idea: to create an accessible, reliable tool that empowers individuals to verify the news they consume. Our journey began with a commitment to leveraging technology for good, building an AI that can cut through the noise and provide clarity.
+                    </p>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-white">Our <span class="text-green-400">Vision</span></h2>
+                    <p class="mt-4 text-gray-400 leading-relaxed">
+                        Our vision is to empower people with true news and encourage skepticism towards unverified information found on social media. We created this application to provide a quick and easy way to check the facts, fostering a more informed and discerning public. We believe that access to reliable information is a cornerstone of a healthy society.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Meet the Team Section -->
+            <div class="mt-24 max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-white">Meet the <span class="text-green-400">Creator</span></h2>
+                <div class="mt-10 inline-block">
+                    <img class="h-32 w-32 rounded-full mx-auto ring-4 ring-gray-700" src="https://placehold.co/200x200/1F2937/FFFFFF?text=You" alt="Team member photo">
+                    <h3 class="mt-4 text-2xl font-bold text-white">Varchasva Khare</h3>
+                    <p class="text-green-400">Creator & Lead Developer</p>
+                    <p class="mt-2 max-w-md mx-auto text-gray-400">
+                        As the sole developer behind VeriScanX, Varchasva is passionate about using machine learning to solve real-world problems. With a background in AI and software development, he built this platform to combat misinformation and promote media literacy.
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" href="static/logo.svg">
+
+    <!-- Tailwind CSS v2 -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>How It Works - VeriScanX</title>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Custom styles for form inputs for better theme consistency */
+        .form-input {
+            background-color: #1F2937; /* bg-gray-800 */
+            border-color: #4B5569; /* bg-gray-600 */
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #34D399; /* green-400 */
+            box-shadow: 0 0 0 2px rgba(52, 211, 153, 0.5);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <div class="container mx-auto px-6">
+        <!-- Header / Navbar -->
+        <header class="py-6 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="/" class="flex items-center space-x-3">
+                <img src="static/logo.svg" alt="VeriScanX Logo" class="h-10 w-10">
+                <span class="text-2xl font-semibold text-white">VeriScanX</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex space-x-8 text-base items-center">
+                <a href="/" class="text-gray-400 hover:text-white transition duration-300">Home</a>
+                <a href="/predict" class="text-gray-400 hover:text-white transition duration-300">Prediction</a>
+                <!-- Active Link -->
+                <a href="/working" class="text-white font-medium">How It Works</a>
+                <a href="/about" class="text-gray-400 hover:text-white transition duration-300">About</a>
+                <a href="/contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="py-16 md:py-24">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight">Seamless Fact-Checking in <span class="text-green-400">3 Steps</span></h1>
+                <p class="mt-4 text-xl text-gray-400">Understand Our Process</p>
+            </div>
+
+            <div class="mt-20 max-w-3xl mx-auto">
+                <div class="space-y-12">
+                    <!-- Step 1 -->
+                    <div class="flex items-start space-x-6">
+                        <div class="text-6xl font-bold text-gray-700">01</div>
+                        <div class="pt-2 text-left">
+                            <h3 class="text-2xl font-bold text-white">Input & Analyze</h3>
+                            <p class="mt-2 text-gray-400">Paste the news article or headline into the text box. Our AI instantly begins processing the text.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex items-start space-x-6">
+                        <div class="text-6xl font-bold text-gray-700">02</div>
+                        <div class="pt-2 text-left">
+                            <h3 class="text-2xl font-bold text-white">AI-Powered Verification</h3>
+                            <p class="mt-2 text-gray-400">Our machine learning algorithms examine for content for patterns, sources, and credibility indicators.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex items-start space-x-6">
+                        <div class="text-6xl font-bold text-gray-700">03</div>
+                        <div class="pt-2 text-left">
+                            <h3 class="text-2xl font-bold text-white">Instant Results & Insights</h3>
+                            <p class="mt-2 text-gray-400">Receive a clear, concise credibility score and a breakdown of the key findings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
+

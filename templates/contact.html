@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" href="static/logo.svg">
+
+    <!-- Tailwind CSS v2 -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Contact Us - VeriScanX</title>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Adding a subtle background pattern for visual depth */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231a202c' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.1;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white relative">
+
+    <div class="container mx-auto px-6">
+        <!-- Header / Navbar -->
+        <header class="py-6 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="/" class="flex items-center space-x-3">
+                <img src="static/logo.svg" alt="VeriScanX Logo" class="h-10 w-10">
+                <span class="text-2xl font-semibold text-white">VeriScanX</span>
+            </a>
+            
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex space-x-8 text-base items-center">
+                <a href="/" class="text-gray-400 hover:text-white transition duration-300">Home</a>
+                <a href="/predict" class="text-gray-400 hover:text-white transition duration-300">Prediction</a>
+                <a href="/working" class="text-gray-400 hover:text-white transition duration-300">How It Works</a>
+                <a href="/about" class="text-gray-400 hover:text-white transition duration-300">About</a>
+                <a href="/contact" class="text-white font-medium">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="py-16 md:py-24">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight">Get In Touch</h1>
+                <p class="mt-4 text-xl text-gray-400">Have a question or feedback? We'd love to hear from you.</p>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="mt-20 max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+                
+                <!-- Contact Form -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-2xl">
+                    <form action="#" method="POST">
+                        <div class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-300">Full Name</label>
+                                <input type="text" name="name" id="name" required class="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md shadow-sm py-3 px-4 text-white focus:outline-none focus:ring-green-400 focus:border-green-400">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-300">Email Address</label>
+                                <input type="email" name="email" id="email" required class="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md shadow-sm py-3 px-4 text-white focus:outline-none focus:ring-green-400 focus:border-green-400">
+                            </div>
+                             <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-300">Subject</label>
+                                <input type="text" name="subject" id="subject" required class="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md shadow-sm py-3 px-4 text-white focus:outline-none focus:ring-green-400 focus:border-green-400">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-300">Message</label>
+                                <textarea id="message" name="message" rows="4" required class="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md shadow-sm py-3 px-4 text-white focus:outline-none focus:ring-green-400 focus:border-green-400"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full inline-block bg-green-400 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-300 transition duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="text-left pt-8">
+                    <h3 class="text-2xl font-bold text-white">Contact Information</h3>
+                    <p class="mt-2 text-gray-400">Reach out directly through the channels below.</p>
+                    <div class="mt-6 space-y-4">
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <div class="ml-4">
+                                <p class="font-semibold">Email</p>
+                                <a href="mailto:contact@veriscanx.ai" class="text-gray-400 hover:text-green-400">contact@veriscanx.ai</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                             <div class="ml-4">
+                                <p class="font-semibold">Location</p>
+                                <p class="text-gray-400">Bhopal, Madhya Pradesh, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
