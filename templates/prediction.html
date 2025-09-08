@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon (Using your original path) -->
+    <link rel="icon" href="static/logo.svg">
+
+    <!-- Tailwind CSS -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Prediction - VeriScanX</title>
+
+    <!-- Custom CSS to apply the font -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Style for the textarea placeholder text */
+        .custom-placeholder::placeholder {
+            color: #9CA3AF; /* gray-400 */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <div class="container mx-auto px-6">
+        <!-- Header / Navbar: Corrected to match the homepage -->
+        <header class="py-6 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="/" class="flex items-center space-x-3">
+                <img src="static/logo.svg" alt="VeriScanX Logo" class="h-10 w-10">
+                <span class="text-2xl font-semibold text-white">VeriScanX</span>
+            </a>
+
+            <!-- CORRECTED Navigation Links -->
+            <nav class="hidden md:flex space-x-8 text-base items-center">
+                <a href="/" class="text-gray-400 hover:text-white transition duration-300">Home</a>
+                <a href="/predict" class="text-white font-medium">Prediction</a>
+                <a href="/working" class="text-gray-400 hover:text-white transition duration-300">How It Works</a>
+                <a href="/about" class="text-gray-400 hover:text-white transition duration-300">About</a>
+                <a href="/contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Main Prediction Section -->
+        <main class="py-16 md:py-24">
+            <div class="max-w-3xl mx-auto text-center">
+                
+                <!-- Page Title -->
+                <h1 class="text-4xl lg:text-5xl font-bold leading-tight">
+                    Enter News for Verification
+                </h1>
+                <h2 class="text-xl text-green-400 font-medium mt-2 mb-10">
+                    AI-Powered Fact-Checking
+                </h2>
+
+                <!-- Prediction Form -->
+                <form action="/predict" method="POST" class="w-full">
+                    <div class="flex flex-col items-center">
+                        <!-- Text Input -->
+                        <textarea
+                            name="news"
+                            id="news"
+                            rows="4"
+                            class="w-full p-4 bg-gray-800 border-2 border-gray-700 rounded-lg text-white text-lg focus:ring-2 focus:ring-green-400 focus:border-green-400 transition duration-300 custom-placeholder"
+                            placeholder="Paste the news headline or article text here..."
+                            required
+                        ></textarea>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="mt-6 inline-block bg-green-400 text-gray-900 font-bold py-3 px-12 rounded-lg text-lg hover:bg-green-300 transition duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
+                            Analyze
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Prediction Result Display -->
+                {% if prediction_text %}
+                <div class="mt-12 p-6 bg-gray-800 border border-gray-700 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-2">Prediction Result</h3>
+                    <p class="text-xl font-medium {% if 'real' in prediction_text.lower() %}text-green-400{% else %}text-red-400{% endif %}">
+                        {{ prediction_text }}
+                    </p>
+                </div>
+                {% endif %}
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+
+

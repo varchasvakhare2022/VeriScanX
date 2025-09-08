@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-t">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon (You can keep your original or update it) -->
+    <link rel="icon" href="static/logo.svg">
+
+    <!-- Tailwind CSS -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts: Poppins (This is new for the modern typography) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>VeriScanX - Fake News Detection</title>
+
+    <!-- A little bit of custom CSS to define the font -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<!-- Body: Changed background color to a dark blue-gray -->
+<body class="bg-gray-900 text-white">
+
+    <div class="container mx-auto px-6">
+        <!-- Header / Navbar: Updated with new logo and styling -->
+        <header class="py-6 flex justify-between items-center">
+            <!-- Logo: Now using the SVG file for the new logo -->
+            <a href="/" class="flex items-center space-x-3">
+                <img src="static/logo.svg" alt="VeriScanX Logo" class="h-10 w-10">
+                <span class="text-2xl font-semibold text-white">VeriScanX</span>
+            </a>
+            
+            <!-- Navigation Links: Corrected to include 'Prediction' -->
+            <nav class="hidden md:flex space-x-8 text-base items-center">
+                <a href="/" class="text-white font-medium">Home</a>
+                <a href="/predict" class="text-gray-400 hover:text-white transition duration-300">Prediction</a>
+                <a href="/working" class="text-gray-400 hover:text-white transition duration-300">How It Works</a>
+                <a href="/about" class="text-gray-400 hover:text-white transition duration-300">About</a>
+                <a href="/contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Hero Section: Updated content, styling, and layout -->
+        <main class="flex flex-col md:flex-row items-center gap-12 py-20 md:py-32">
+            
+            <!-- Left Content: New text and styled button -->
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl lg:text-5xl font-bold leading-tight">
+                    Uncover Truth. Instantly
+                </h1>
+                <h2 class="text-xl text-green-400 font-medium mt-2 mb-6">
+                    AI-Powered Fake News Detection
+                </h2>
+                <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                    Combat misinformation with confidence. Our advanced machine learning platform analyzes news articles in real-time, delivering instant accuracy scores and detailed insights.
+                </p>
+                <a href="/predict" class="inline-block bg-green-400 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-300 transition duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
+                    START VERIFYING
+                </a>
+                
+            </div>
+
+            <!-- Right Image: Using the new illustration -->
+            <div class="md:w-1/2">
+                <img src="static/illustration.png" alt="AI analyzing news illustration">
+            </div>
+        </main>
+        
+    </div>
+    
+</body>
+</html>
