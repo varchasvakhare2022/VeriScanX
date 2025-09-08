@@ -26,9 +26,9 @@
 </head>
 
 <!-- Body: Changed background color to a dark blue-gray -->
-<body class="bg-gray-900 text-white">
+<body class="bg-gray-900 text-white overflow-hidden">
 
-    <div class="container mx-auto px-6">
+    <div class="container mx-auto px-6 min-h-screen flex flex-col">
         <!-- Header / Navbar: Updated with new logo and styling -->
         <header class="py-6 flex justify-between items-center">
             <!-- Logo: Now using the SVG file for the new logo -->
@@ -47,8 +47,8 @@
             </nav>
         </header>
 
-        <!-- Hero Section: Updated content, styling, and layout -->
-        <main class="flex flex-col md:flex-row items-center gap-12 py-20 md:py-32">
+        <!-- Hero Section: Full viewport minus header -->
+        <main class="flex-1 flex flex-col md:flex-row items-center gap-12 py-6">
             
             <!-- Left Content: New text and styled button -->
             <div class="md:w-1/2 text-center md:text-left">
@@ -68,8 +68,8 @@
             </div>
 
             <!-- Right Image: Using the new illustration -->
-            <div class="md:w-1/2">
-                <img src="static/illustration.png" alt="AI analyzing news illustration">
+            <div class="md:w-1/2 w-full">
+                <img src="static/illustration.png" alt="AI analyzing news illustration" class="w-full h-auto block">
             </div>
         </main>
         
