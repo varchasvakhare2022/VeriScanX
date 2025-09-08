@@ -13,6 +13,12 @@ from matplotlib import pyplot as plt
 from sklearn.linear_model import PassiveAggressiveClassifier
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
+from dotenv import load_dotenv
+import os 
+
+load_dotenv()
+
+WEB3FORM_KEY = os.getenv("WEB3FORM_KEY")
 
 # These downloads are only needed once. After the first run, you can comment them out to speed up startup.
 # nltk.download('stopwords')
@@ -91,7 +97,7 @@ def about():
 # (You will need to create contact.html)
 @app.route('/contact')
 def contact():
-    return render_template('contact.html')
+    return render_template('contact.html', web3form_key=WEB3FORM_KEY)
 
 if __name__ == '__main__':
     app.run(debug=True)
