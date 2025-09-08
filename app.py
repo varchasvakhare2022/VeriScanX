@@ -1,6 +1,3 @@
-# @Abhishek pp
-# github-abiek12
-
 import nltk
 from flask import Flask, render_template, request
 import pandas as pd
