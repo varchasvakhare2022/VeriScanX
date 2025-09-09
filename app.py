@@ -20,10 +20,9 @@ load_dotenv()
 
 WEB3FORM_KEY = os.getenv("WEB3FORM_KEY")
 
-# These downloads are only needed once. After the first run, you can comment them out to speed up startup.
-nltk.download('stopwords')
-nltk.download('punkt')
-nltk.download('wordnet')
+#nltk.download('stopwords')
+#nltk.download('punkt')
+#nltk.download('wordnet')
 
 app = Flask(__name__, template_folder='./templates', static_folder='./static')
 
@@ -36,22 +35,12 @@ except FileNotFoundError:
     # You might want to exit or handle this more gracefully
     exit()
 
-lemmatizer = WordNetLemmatizer()
-stpwrds = set(stopwords.words('english'))
 
 # --- ML Prediction Function ---
 def fake_news_det(news):
-    review = news
-    review = re.sub(r'[^a-zA-Z\s]', '', review)
-    review = review.lower()
-    review = nltk.word_tokenize(review)
-    
-    corpus = []
-    for y in review:
-        if y not in stpwrds:
-            corpus.append(lemmatizer.lemmatize(y))
-            
-    input_data = [' '.join(corpus)]
+    # Use the same preprocessing pipeline as training: rely on the saved
+    # TfidfVectorizer to handle tokenization and stop words.
+    input_data = [news]
     vectorized_input_data = vector.transform(input_data)
     prediction = loaded_model.predict(vectorized_input_data)
     return prediction
