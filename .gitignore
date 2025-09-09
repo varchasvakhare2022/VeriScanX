@@ -1,4 +1,5 @@
 .env
+news.csv
 __pycache__/
 *.pyc
 *.pyo
