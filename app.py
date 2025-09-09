@@ -21,9 +21,9 @@ load_dotenv()
 WEB3FORM_KEY = os.getenv("WEB3FORM_KEY")
 
 # These downloads are only needed once. After the first run, you can comment them out to speed up startup.
-# nltk.download('stopwords')
-# nltk.download('punkt')
-# nltk.download('wordnet')
+nltk.download('stopwords')
+#nltk.download('punkt')
+#nltk.download('wordnet')
 
 app = Flask(__name__, template_folder='./templates', static_folder='./static')
 
